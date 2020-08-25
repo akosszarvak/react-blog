@@ -2,13 +2,20 @@ import React from "react";
 import { categoryColors } from "./styles";
 
 export default function MasonryPost({ post, tagsOnTop }) {
-  const style = {
+  const windowWidth = window.innerWidth;
+  const imageBackground = {
     backgroundImage: `url("${require(`../../assets/images/${post.image}`)}")`,
   };
-  console.log(style);
+
+  const style =
+    windowWidth > 900 ? { ...imageBackground, ...post.style } : imageBackground;
+
   return (
     <a className="masonry-post overlay" style={style} href={post.link}>
-      <div className="image-text">
+      <div
+        className="image-text"
+        style={{ justifyContent: tagsOnTop ? "space-between" : "flex-end" }}
+      >
         <div className="tags-container">
           {post.categories.map((tag, ind) => (
             <span

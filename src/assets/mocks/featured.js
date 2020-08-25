@@ -27,6 +27,6 @@ export default [
     date: moment().format("MMMM DD, YYYY"),
     categories: ["tech culture", "tech news"],
     link: "#",
-    image: "img4.jpg",
+    image: "coyotes.png",
   },
 ];
