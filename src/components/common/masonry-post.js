@@ -3,7 +3,7 @@ import { categoryColors } from "./styles";
 
 export default function MasonryPost({ post, tagsOnTop }) {
   const style = {
-    backgroundImage: `url("${require(`../../assets/images/${post.image}`)})`,
+    backgroundImage: `url("${require(`../../assets/images/${post.image}`)}")`,
   };
   console.log(style);
   return (
