@@ -40,8 +40,6 @@
     font-size: 18px;
     color: $text-light;
   }
-
- 
 }
 
 @media screen and (max-width: 900px) {
@@ -50,13 +48,12 @@
     margin: 10px 0;
     height: 300px;
 
-    .tags-container{
+    .tags-container {
       position: relative;
       z-index: 0;
     }
-    .image-date{
+    .image-date {
       position: relative;
-  
     }
   }
 }

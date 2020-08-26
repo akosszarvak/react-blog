@@ -27,12 +27,13 @@ const featuredConfig = {
 const mergeStyles = function (posts, config) {
   posts.forEach((post, index) => {
     post.style = config[index];
-    post.author = 'Ákos Szarvák';
-    post.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" 
+    post.author = "Ákos Szarvák";
+    post.description =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
   });
 };
 
-const recentPosts= [...trending, ...featured, ...featured];
+const recentPosts = [...trending, ...featured, ...featured];
 
 mergeStyles(trending, trendingConfig);
 mergeStyles(featured, featuredConfig);
@@ -42,31 +43,27 @@ const lastFetured = featured.pop();
 export default function Home() {
   return (
     <main className="home">
-    <section className="container">
-      <div className="row">
- 
-        <section className="featured-posts-container">
-          <PostMasonry posts={featured} columns={2} tagsOnTop={true} />
-          <MasonryPost post={lastFetured} tagsOnTop={true} />
+      <section className="container">
+        <div className="row">
+          <section className="featured-posts-container">
+            <PostMasonry posts={featured} columns={2} tagsOnTop={true} />
+            <MasonryPost post={lastFetured} tagsOnTop={true} />
+          </section>
+        </div>
+      </section>
+      <section className="bg-white">
+        <section className="container">
+          <div className="row">
+            <h1>Recent Posts</h1>
+            <PostGrid posts={recentPosts} />
+          </div>
         </section>
-
-      </div>
-    </section>
-
-    <section className="container">
-      <div className="row">
-        <h1>Recent Posts</h1>
-        <PostGrid posts={recentPosts } />
-      
-      </div>
-    </section>
-    <section className="container">
-      <div className="row">
- 
-        <PostMasonry posts={trending} columns={3} />
-      
-      </div>
-    </section>
+      </section>
+      <section className="container">
+        <div className="row">
+          <PostMasonry posts={trending} columns={3} />
+        </div>
+      </section>
     </main>
   );
 }

@@ -2,10 +2,12 @@
   height: 65px;
   width: 100%;
   background: white;
- 
   display: flex;
   justify-content: space-between;
   color: $text-color;
+  position: fixed;
+  z-index: 100;
+  top: 0;
 
   .menu-title {
     font-size: 24px;
@@ -106,16 +108,10 @@
         left: 0px;
         position: fixed;
         z-index: 3;
-
-
-     
       }
     }
     .ion-ios-menu {
       display: flex;
-      
-     
     }
- 
   }
 }
