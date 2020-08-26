@@ -2,6 +2,7 @@
   height: 65px;
   width: 100%;
   background: white;
+ 
   display: flex;
   justify-content: space-between;
   color: $text-color;
@@ -103,12 +104,18 @@
 
       &.active {
         left: 0px;
-        position: absolute;
+        position: fixed;
         z-index: 3;
+
+
+     
       }
     }
     .ion-ios-menu {
       display: flex;
+      
+     
     }
+ 
   }
 }
